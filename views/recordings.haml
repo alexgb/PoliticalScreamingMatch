@@ -1,0 +1,19 @@
+
+%table
+  %th Date
+  %th Zip
+  %th City
+  %td Audio
+  - each recording in recordings
+    %tr
+      %td
+        = recording.created_at
+      %td
+        = recording.CalledZip
+      %td
+        = recording.ToCity
+        ,
+        = recording.ToState
+      %td
+        %audio{ src:  recording.RecordingUrl, controls: "controls" }
+        %a{ href: recording.RecordingUrl } Audio Link

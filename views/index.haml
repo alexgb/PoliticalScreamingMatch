@@ -1,0 +1,62 @@
+!!! 5
+%html{ xmlns: "http //www.w3.org/1999/xhtml", "xml lang": "en",  lang: "en"}
+  %head
+    %title Political Screaming Match
+    %meta{ content: "Grab you phone and get your debate on! Have an animated political discussion with a perfect stranger right now!", "http-equiv":"description" }
+    %meta{ content: "IE=edge,chrome=1", "http-equiv":"X-UA-Compatible" }
+    %script{ src: 'js/jquery.min.js'}
+    %script{ src: 'js/underscore.js'}
+    %script{ src: 'js/backbone.js'}
+    %script{ src: 'js/jquery.scrollto-min.js'}
+    %script{ src: '/socket.io/socket.io.js'}
+    %script{ src: "http://use.typekit.com/keq2zto.js" }
+    :javascript
+      try{Typekit.load();}catch(e){}
+    %script{ src: "http://static.twilio.com/libs/twiliojs/1.0/twilio.min.js" }
+    %link{ href: '/css/style.css', type:'text/css', rel: 'stylesheet'}
+    %script{ src: 'js/psm.js'}
+    %meta{ property: "og:title", content:"Political Screaming Match"}
+    %meta{ property: "og:type", content: "website" }
+    %meta{ property: "og:url", content: "http://politicalscreamingmatch.com/" }
+    %meta{ property: "og:image", content: "http://politicalscreamingmatch.com/images/icon.png" }
+    %meta{ property: "fb:app_id", content: "364327926971369" }
+    %meta{ property: "og:description", content: "Have an animated political discussion with a perfect stranger right now!" }
+
+
+  %body
+    %script{ type: 'backbone', id: 'app-view' }
+      %section#phone
+      %section#buttons
+      %section#availability
+      %section#status
+    %script{ type: 'backbone', id: 'phone-view' }
+      != partial("phone_view.html.ejs")
+    %script{ type: 'backbone', id: 'buttons-view' }
+      != partial("buttons_view.html.ejs")
+    %script{ type: 'backbone', id: 'availability-view' }
+      != partial("availability_view.html.ejs")
+    %script{ type: 'backbone', id: 'status-view' }
+      != partial("status_view.html.ejs")
+    %header#site-header
+      %a{ href: "/"}
+        %img{ src: "/images/header.png" }
+      #share
+        != partial("share.html.ejs")
+      %section#intro
+        %a{ href: 'http://politicalscreamingmatch.tumblr.com' , target: "_blank"}
+          follow us for updates 
+    %section#week
+      %h1 The Presidential Debate #1
+    %section#content
+    %section#info
+      %p Have an animated political discussion with a perfect stranger right now!
+      %p All conversations are anonymous and the other party will *not* receive your phone number (unless you give it to them over the phone). Full <a href='/privacy_policy'>Privacy Policy</a> 
+      %p All calls are recorded, the best ones will be posted to the <a href='http://politicalscreamingmatch.tumblr.com/'>Political Screaming Match blog</a> periodically. You must keep your browser open to receive a call.
+      %p It's ok to be animated, but please - no threats or inappropriate name-calling (appropriate name calling is fine).
+    %footer#site-footer
+      this site be copyrighted &copy;2012. 
+      a <a href='http://cykod.com' target='_blank'>Cykod</a> hack,
+      built at <a href='http://railscamps.com/' target='_blank'>Rails Camp NE 2012</a>
+      <a href='mailto:politicalscreamingmatch@cykod.com'>Contact us</a>
+    != partial("analytics.html.ejs")
+

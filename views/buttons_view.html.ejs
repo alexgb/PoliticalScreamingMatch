@@ -1,0 +1,14 @@
+<hr/>
+<h1>
+  <span>2</span>
+  Choose your position on the topic
+</h1>
+<ul class='button-list'>
+  [[- _.each(positions, function(pos) { ]]
+  <li>
+    <button data-position="[[ pos[0] ]]" data-value="l" id="[[ pos[0] ]]_l">[[ pos[2] ]]</button>
+    <span>[[ pos[1] ]]</span>
+    <button data-position="[[ pos[0] ]]" data-value="r" id="[[ pos[0] ]]_r">[[ pos[3] ]]</button>
+  </li>
+  [[- }) ]]
+</ul>

@@ -1,0 +1,29 @@
+!!! 5
+%html{ xmlns: "http //www.w3.org/1999/xhtml", "xml lang": "en",  lang: "en"}
+  %head
+    %title Political Screaming Match
+    %meta{ content: "Grab you phone and get your debate on! Have an animated political discussion with a perfect stranger right now!", "http-equiv":"description" }
+    %meta{ content: "IE=edge,chrome=1", "http-equiv":"X-UA-Compatible" }
+    %link{ href: '/css/style.css', type:'text/css', rel: 'stylesheet'}
+  %body
+    %header#site-header
+      %a{ href: "/"}
+        %img{ src: "/images/header.png" }
+      #share
+        != partial("share.html.ejs")
+    %h1 Privacy Policy
+    %section#info
+      %p Any data is collected by Political Screaming Match solely for the purpose of connecting two individuals together anonymously for discussion, recording and posting the ensuing conversation.
+      %p Conversations will be posted to the Political Screaming Match blog (and possibly played on other blogs and by news organizations.) Any personal information given out during the call may be made available to others as a consequence of posting the Audio (an attempt will be made to scrub personal information, but there are no guarantees)
+      %p By using Political Screaming Match you are consenting to have your voice recorded and played back on the Internet.
+      %p Phone numbers are kept in the system for the purpose of keeping track which have been confirmed and for statistical purposes to track usage. In the event of a reporter or other inquiry we may try to contact you via your phone number (if available,) but your phone number will *never* be given out to a 3rd party without your consent, unless we are required to by law.
+      %p If you are uncomfortable given out your phone number, please choose the \"Mic &amp; Speakers\" option as this option requires no personal information and connects directly using your computer.
+      %p Political Screaming Match is a project created by Pascal and Martha Rettig. If you have any questions, please contact us via email at  <a href='mailto:politicalscreamingmatch@cykod.com'>PoliticalScreamingMatch@cykod.com</a>
+    %footer#site-footer
+      this site be copyrighted &copy;2012. 
+      a <a href='http://cykod.com' target='_blank'>Cykod</a> hack,
+      built at <a href='http://railscamps.com/' target='_blank'>Rails Camp NE 2012</a>
+      <a href='mailto:politicalscreamingmatch@cykod.com'>Contact us</a>
+    != partial("analytics.html.ejs")
+
+

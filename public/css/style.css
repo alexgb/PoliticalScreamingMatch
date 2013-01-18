@@ -1,0 +1,249 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body { 
+  margin:0 auto;
+  width:1024px;
+  background-color:#ebe3dc;
+  font-family: "kulturista-web";
+}
+
+#site-header {
+  position:relative;
+  height:300px;
+}
+
+#share {
+  position:absolute;
+  bottom:15px;
+  right:120px;
+}
+
+
+button.selected {
+  background-color:black;
+}
+
+a { 
+  color:white;
+}
+
+h1 {
+  color:#603813;
+  font-size:1.9em;
+  font-weight:bold;
+  padding:0px 0px;
+  margin:0px;
+  text-transform:uppercase;
+  margin-bottom:5px;
+}
+
+h1 span {
+  display:inline-block;
+  height:42px;
+  width:50px;
+  text-align:center;
+  background-color:#c1272d;
+  padding-top:8px;
+  border-radius:25px;
+  color:#dcdcdc;
+
+}
+
+#content {
+  padding:20px 60px;
+}
+
+hr { 
+  height:0px;
+  border:0px;
+  border-top:5px dashed #29abe2;
+  margin:20px 0px;
+}
+
+
+.disabled h1 {
+  color: #998675;
+}
+
+.disabled h1 span {
+  background-color: #c7b299;
+}
+
+.disabled .button-list , .disabled .buttons {
+  display:none; 
+}
+
+#info {
+
+  margin: 20px 60px;
+  background-color:#58412e;
+  color:white;
+  padding: 25px 25px;
+}
+
+#info p {
+  padding-bottom:20px;
+  font-weight:300;
+  font-size:1.5em;
+  line-height:1.3em;
+
+}
+
+.interior {
+  padding-left:60px;
+}
+
+input {
+  font-size:1.3em;
+  width:250px;
+  padding:5px 5px;
+  border:1px solid #d7cdc0;
+}
+
+button {
+  font-size:1.2em;
+  background-color:#d62229;
+  border-radius:5px;
+  border:0px;
+  padding:6px 15px;
+  text-transform:uppercase;
+  color:#dcdcdc;
+}
+
+button#set-twilio {
+}
+
+.button-list button, .button-list span {
+  width:34%;
+  display:inline-block;
+  text-align:center;
+  font-size:1.3em;
+
+}
+
+.button-list span {
+  width:30%;
+}
+
+.buttons li { 
+  display:inline-block;
+  width:33%;
+}
+
+.buttons button {
+  width:100%;
+}
+
+.hidden { display:none; }
+
+.alert {
+  padding:20px;
+  text-align:center;
+  color:white;
+  background-color:black;
+  border-radius:15px;
+  font-weight:bold;
+  font-size:1.5em;
+}
+
+footer { 
+  padding:0px 60px;
+  color:black;
+  text-align:right;
+}
+
+footer a { color:black; }
+
+#intro {
+	position:absolute;
+	left: 270px; bottom:15px;
+}
+
+#intro a { 
+	padding:10px;
+	display:inline-block;
+	text-decoration:none;
+	border-radius:10px;
+	background-color:#c7b299;
+	color:white;
+	text-transform:uppercase;
+}
+
+
+#week { 
+  background:url(../images/week.png) no-repeat left top;
+  position: relative;
+  text-align:center;
+  padding-top:60px;
+  height: 64px;
+  margin:0 auto;
+  width: 842px;
+}
+
+#week h1 {
+  text-transform:uppercase;
+  color:#29abe2;
+  font-size:40px;
+
+}
+
+
+#phone p { 
+	padding-bottom:5px;
+	padding-left:5px;
+
+}
+
+
+
+#or {
+  padding:5px 30px;
+  display:inline-block;
+  color:#603813;
+  font-size:1.5em;
+  font-weight:bold;
+  text-transform:uppercase;
+}

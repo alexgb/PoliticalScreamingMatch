@@ -1,0 +1,28 @@
+<h1> 
+  <span>1</span>
+  How to connect
+</h1>
+<section class='interior'>
+[[- if(!completed) { ]]
+  <p>If using Cell, it will be confirmed via SMS &amp; will <b>only</b> be used to anonymously connect for one call.</p>
+  <button id='set-twilio'>Use Mic &amp; Speakers</button>
+  <span id="or">or</span>
+  <input type='text' name='home' value='[[ model.phone || '' ]]' placeholder='eg: 555-555-1212'/> 
+  <button id='set-cell'>Use Cell Phone</button> 
+[[- } else { ]]
+  [[- if(model.twilio) { ]]
+   Connecting with Mic &amp; Speakers
+  [[- } else { ]]
+   Your number: [[ model.phone ]]
+    [[- if(!_.isUndefined(model.confirmed)) { ]]
+      [[- if(model.confirmed) { ]]
+        <h2> Your phone has been confirmed</h2>
+      [[- } else { ]]
+        <h2 class='alert'> Please respond to the SMS sent to your phone.</h2>
+      [[- } ]]
+    [[- } ]]
+  [[- } ]]
+[[- } ]]
+
+</section>
+

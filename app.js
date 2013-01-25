@@ -355,9 +355,3 @@ require("mongodb").connect(process.env.MONGOLAB_URI || "mongodb://localhost/call
   });
 });
 
-process.on('uncaughtException', function(err) {
-  console.log("****************Error**********************");
-  console.log(err);
-  console.log("****************Error**********************");
-});
-

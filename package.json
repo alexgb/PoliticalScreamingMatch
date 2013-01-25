@@ -4,7 +4,7 @@
   "private": true,
   "engines": {
     "node": "0.6.20",
-    "npm":  "1.1.37"
+    "npm":  "1.1.36"
   },
   "dependencies": {
     "hamljs": ">0",

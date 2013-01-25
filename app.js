@@ -42,7 +42,7 @@ io.set('store', new RedisStore({
 var client = new twilio.Client(process.env.TWILIO_SID,
                                process.env.TWILIO_AUTH_TOKEN,
                                process.env.PRIMARY_DOMAIN, // Eg "politicalscreamingmatch.com"
-                              { "express" : app })
+                              { "express" : app, port: port })
 autoUri = global.autoUri
 autoUri.baseUri = 'http://' + autoUri.hostname + '/' + autoUri.basePath + '/'
 

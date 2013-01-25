@@ -3,19 +3,20 @@
   "version": "0.0.1",
   "private": true,
   "engines": {
-    "node": "0.6.11",
-    "npm":  "1.1.1"
+    "node": "0.6.19",
+    "npm":  "1.1.24"
   },
   "dependencies": {
     "hamljs": ">0",
     "express": "2.5.8",
     "ejs":       "0.4.3",
     "mongodb": "1.0.2",
-    "socket.io": "0.9.6",
+    "socket.io": ">0",
     "underscore": ">0",
     "redis": ">0",
     "heroku-redis-client": ">0",
-    "connect-redis": ">0"
+    "connect-redis": ">0",
+    "twilio": "git://github.com/sjwalter/node-twilio.git"
   }
 }
 

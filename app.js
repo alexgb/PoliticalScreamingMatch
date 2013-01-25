@@ -6,7 +6,7 @@ var twilio = require("twilio"),
     Capability = require("./capability"),
     ConnectRedisStore = require('connect-redis')(express),
     RedisStore =  require('socket.io/lib/stores/redis'),
-    redis = require('heroku-redis-client');
+    RedisClient = require('heroku-redis-client');
 
 
 
@@ -22,7 +22,7 @@ var app = express.createServer(
   express.static(__dirname + '/public'),
   express.bodyParser(),
   express.cookieParser(),
-  express.session({ secret: sessionSecret, store: new ConnectRedisStore({ client: redis.createClient() }) })
+  express.session({ secret: sessionSecret, store: new ConnectRedisStore({ client: RedisClient.createClient() }) })
 );
 
 app.register('.haml', require('hamljs'));
@@ -32,9 +32,10 @@ app.register('.haml', require('hamljs'));
 var io = require('socket.io').listen(app);
 
 io.set('store', new RedisStore({
-  redisPub: redis.createClient(),
-  redisSub: redis.createClient(),
-  redisClient: redis.createClient()
+  redis: RedisClient.redis,
+  redisPub: RedisClient.createClient(),
+  redisSub: RedisClient.createClient(),
+  redisClient: RedisClient.createClient()
 }));
 
 
